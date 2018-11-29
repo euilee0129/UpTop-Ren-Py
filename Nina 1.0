@@ -1,1 +1,127 @@
+# UpTop script
 
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define n = Character("Nina")
+
+
+# The game starts here.
+
+label start:
+
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
+
+    scene bg washington
+
+    # This shows a character sprite. A placeholder is used, but you can
+    # replace it by adding a file named "eileen happy.png" to the images
+    # directory.
+
+    show logo base
+    
+    n "*prsent day life of the main character*"
+    
+    n "*happy family*"
+    
+    n "*moving out to new home*"
+    
+    n "*goes to basement/attic to find some valuable things to take with them*"
+    
+    n "*finds a locked drawer with a old, vintage, pretty looking lock*"
+       
+    n "*looks at the lock hole and looks back at her necklace with a similar looking key that could fit*( received key as a small child)"
+    
+    n "*opens drawer with a key from her necklace and finds a book*"
+     
+    n "*FLASHBACK!  Grandma trying to burn the book*"
+     
+    n "*opens book*"
+    
+    n "*sucked in*SCHHHLLLORRP"
+    
+    #Darkness
+    show imagedissolve teleport
+    
+    
+    
+
+    n "-The Beginning-"
+    
+    scene treetest1
+    
+    show ninaa
+    
+    
+       
+    # first choice
+    n "*Nina walks through the forest*"
+    
+    menu:
+        "Knock. Knock.":
+            jump choice1_yes
+        "Opens the door.":
+            jump choice1_no
+    
+    label choice1_yes:
+        $ menu_flag = True
+        n "*hears no sound, opens the door*"
+        jump choice1_done
+    
+    label choice1_no:
+        $ menu_flag = False
+        n "Enters."
+        jump choice1_done
+        
+    label choice1_done:
+        #continue from here
+        
+        
+        
+        
+        
+#        #second choice
+#        menu:
+#        "Finds a note.":
+#            jump choice2_yes
+#        "Goes outside.":
+#            jump choice2_no
+    
+#    label choice2_yes:
+#        $ menu_flag = True
+#        n "*hears Mother*"
+#        jump choice2_done
+    
+#    label choice2_no:
+#        $ menu_flag = False
+#        n "*sees Mother*"
+#        jump choice2_done
+        
+#    label choice2_done:
+#        #continue from here
+#        #third choice
+#        menu:
+#        "Take to hospital.":
+#            jump choice3_yes
+#        "Give medicine.":
+#            jump choice3_no
+    
+#    label choice3_yes:
+#        $ menu_flag = True
+#        n "*call 911*"
+#        jump choice3_done
+    
+#    label choice3_no:
+#        $ menu_flag = False
+#        n "*throw at face*"
+#        jump choice3_done
+        
+#    label choice3_done:
+#        #continue from here
+       
+
+    # This ends the game.
+
+    return
