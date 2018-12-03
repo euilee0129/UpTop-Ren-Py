@@ -122,6 +122,89 @@ label start:
 #        #continue from here
        
 
+ 
+ 
+ 
+ 
+ 
+ 
+# From line 126 to 191 is what i did i put in comments because the code wasnt running idk why 
+#I couldnt figure it out also i added more choices so all we have to do is just 
+#Copy and paste em. all we needto do is fill in the blanks  
+# i also added the rest of the dialoge i saw on the script in google docs
+
+
+#define H = character("Hansel")
+
+#    show logo base
+#    n "*huh? Where am I?"
+
+        # she looks around then looks at herself
+
+#    n "*What?why have I turned into a child"
+
+        # spoky voices beckons her to come to a certain direction
+
+#    n "* who are you? What do you want?"
+
+        # spooky voice: "come... come.. comee"
+
+        # she follows the voice until it disapears into the distance
+
+        #background: fog slowly engulfs the whole background until the fog is only seen
+
+#    n "* i cant see through the thic fog. Where am I?"
+
+        # suddenly something grabs her
+
+
+        # the ??? is a mystery character i guess idk just going with the script i see on google docs
+
+#H "*Gretel! Gretel! Gretel!"
+
+#n "*Gretel? are you talking to me?"
+
+#H "*Of course, silly. Im your brother Hansel"
+
+#n "*What? Wait a second, I'm no-"
+
+#H "*SHH! We have no time for games. We need to get out of here!"
+
+#n "* what are you talking about?"
+
+
+                    # These are the choices 
+    # n "* do you like horror games"
+
+    # menu: 
+        # "Yes":
+            #jump ilikeh
+
+            #"no":
+                #jump ihateh
+
+
+    #label ilikeh
+
+        #n "insert response"
+
+        #retun 
+
+    #label ihateh 
+
+        #n "inert response"
+    
+
+
+
+
+
+
+
+
+
+
+
     # This ends the game.
 
-    return
+return
