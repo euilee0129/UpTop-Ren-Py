@@ -1,12 +1,14 @@
 # UpTop script
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+#The color argument colorizes the name of the character.
 
 define n = Character("Nina")
 
+#brother of Nina
+define h = Character("Hansel")
 
-# The game starts here.
+
+# game start
 
 label start:
 
@@ -21,179 +23,98 @@ label start:
     # directory.
 
     show logo base
-    
+
     n "*prsent day life of the main character*"
-    
+
     n "*happy family*"
-    
+
     n "*moving out to new home*"
-    
+
     n "*goes to basement/attic to find some valuable things to take with them*"
-    
+
     n "*finds a locked drawer with a old, vintage, pretty looking lock*"
-       
+
     n "*looks at the lock hole and looks back at her necklace with a similar looking key that could fit*( received key as a small child)"
-    
+
     n "*opens drawer with a key from her necklace and finds a book*"
-     
+
     n "*FLASHBACK!  Grandma trying to burn the book*"
-     
+
     n "*opens book*"
-    
+
     n "*sucked in*SCHHHLLLORRP"
-    
+
     #Darkness
     show imagedissolve teleport
-    
-    
-    
+
+
 
     n "-The Beginning-"
-    
+
     scene treetest1
-    
-    show ninaa
-    
-    
-       
+
+    show ninaa # protagonist
+
+
     # first choice
     n "*Nina walks through the forest*"
-    
+
     menu:
         "Knock. Knock.":
             jump choice1_yes
         "Opens the door.":
             jump choice1_no
-    
+
     label choice1_yes:
         $ menu_flag = True
         n "*hears no sound, opens the door*"
         jump choice1_done
-    
+
     label choice1_no:
         $ menu_flag = False
         n "Enters."
         jump choice1_done
-        
+
     label choice1_done:
-        #continue from here
-        
-        
-        
-        
-        
-#        #second choice
-#        menu:
-#        "Finds a note.":
-#            jump choice2_yes
-#        "Goes outside.":
-#            jump choice2_no
-    
-#    label choice2_yes:
-#        $ menu_flag = True
-#        n "*hears Mother*"
-#        jump choice2_done
-    
-#    label choice2_no:
-#        $ menu_flag = False
-#        n "*sees Mother*"
-#        jump choice2_done
-        
-#    label choice2_done:
-#        #continue from here
-#        #third choice
-#        menu:
-#        "Take to hospital.":
-#            jump choice3_yes
-#        "Give medicine.":
-#            jump choice3_no
-    
-#    label choice3_yes:
-#        $ menu_flag = True
-#        n "*call 911*"
-#        jump choice3_done
-    
-#    label choice3_no:
-#        $ menu_flag = False
-#        n "*throw at face*"
-#        jump choice3_done
-        
-#    label choice3_done:
-#        #continue from here
-       
-
- 
- 
- 
- 
- 
- 
-# From line 126 to 191 is what i did i put in comments because the code wasnt running idk why 
-#I couldnt figure it out also i added more choices so all we have to do is just 
-#Copy and paste em. all we needto do is fill in the blanks  
-# i also added the rest of the dialoge i saw on the script in google docs
+    #continued
 
 
-#define H = character("Hansel")
-
-#    show logo base
-#    n "*huh? Where am I?"
-
-        # she looks around then looks at herself
-
-#    n "*What?why have I turned into a child"
-
-        # spoky voices beckons her to come to a certain direction
-
-#    n "* who are you? What do you want?"
-
-        # spooky voice: "come... come.. comee"
-
-        # she follows the voice until it disapears into the distance
-
-        #background: fog slowly engulfs the whole background until the fog is only seen
-
-#    n "* i cant see through the thic fog. Where am I?"
-
-        # suddenly something grabs her
 
 
-        # the ??? is a mystery character i guess idk just going with the script i see on google docs
+    #act 2
+    show logo base
 
-#H "*Gretel! Gretel! Gretel!"
+    n "Huh? Where am I?"
 
-#n "*Gretel? are you talking to me?"
+    n "*she looks around then looks at herself*"
 
-#H "*Of course, silly. Im your brother Hansel"
+    n "*What? Why have I turned into a child?"
 
-#n "*What? Wait a second, I'm no-"
+    n "*spoky voices beckons her to come to a certain direction*"
 
-#H "*SHH! We have no time for games. We need to get out of here!"
+    n "Who are you? What do you want?"
 
-#n "* what are you talking about?"
+    n "spooky voice: come... come... come"
 
+    n "*she follows the voice until it disapears into the distance*"
 
-                    # These are the choices 
-    # n "* do you like horror games"
+    #scene <insert fog background>
 
-    # menu: 
-        # "Yes":
-            #jump ilikeh
+    n "I can't see through this thick fog, where am I?"
 
-            #"no":
-                #jump ihateh
+    n "*suddenly something grabs her*" #the ??? is a mystery character
 
+    h "*Gretel! Gretel!"
 
-    #label ilikeh
+    n "*Gretel? Are you talking to me?" #hansel thinks nina is gretal, because she is in story book
 
-        #n "insert response"
+    h "*Of course, silly. Im your brother Hansel"
 
-        #retun 
+    n "*What? Wait a second, I'm no-"
 
-    #label ihateh 
+    h "SHH! We have no time for games. We need to get out of here!"
 
-        #n "inert response"
-    
+    n "what are you talking about?"
 
 
 
@@ -206,5 +127,4 @@ label start:
 
 
     # This ends the game.
-
-return
+    return
