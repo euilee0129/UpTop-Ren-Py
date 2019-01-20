@@ -7,6 +7,7 @@ define n = Character("Nina")
 #brother of Nina
 define h = Character("Hansel")
 
+define slow_dissolve = Dissolve(1.0)#          transitions
 
 # game start
 
@@ -17,12 +18,18 @@ label start:
     # images directory to show it.
 
     scene bg washington
+    with Dissolve(.5)
+
+    pause.5#       transition time(?)
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
     show logo base
+    with Dissolve(.5)
+
+    pause.5
 
     n "*prsent day life of the main character*"
 
@@ -46,14 +53,24 @@ label start:
 
     #Darkness
     show imagedissolve teleport
+    with Dissolve(.5)
+
+    pause.5
+
+    with pixellate#            transition doesnt work
+
+    pause.5
 
 
 
     n "-The Beginning-"
 
     scene treetest1
+    with Dissolve(.5)
 
-    show ninaa # protagonist
+    pause.5
+
+    show ninaa #  protagonist
 
 
     # first choice
@@ -83,6 +100,9 @@ label start:
 
     #act 2
     show logo base
+    with Dissolve(.5)
+
+    pause.5
 
     n "Huh? Where am I?"
 
@@ -102,11 +122,11 @@ label start:
 
     n "I can't see through this thick fog, where am I?"
 
-    n "*suddenly something grabs her*" #the ??? is a mystery character
+    n "*suddenly something grabs her*" #         the ??? is a mystery character
 
     h "*Gretel! Gretel!"
 
-    n "*Gretel? Are you talking to me?" #hansel thinks nina is gretal, because she is in story book
+    n "*Gretel? Are you talking to me?" #        hansel thinks nina is gretal, because she is in story book
 
     h "*Of course, silly. Im your brother Hansel"
 
@@ -126,5 +146,5 @@ label start:
 
 
 
-    # This ends the game.
+    #  This ends the game.
     return
